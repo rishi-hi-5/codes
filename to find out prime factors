@@ -1,0 +1,15 @@
+define factors(n)
+
+    z = 2
+
+    while (z * z <= n)
+
+        if (n % z == 0)
+            output z
+            n /= z
+
+        else
+            z++
+
+    if n > 1
+        output n

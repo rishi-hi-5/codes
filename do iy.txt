@@ -1,0 +1,3 @@
+multimeter cro powersupply PCB
+
+resistor and its value capacitor voltage divider

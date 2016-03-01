@@ -1,0 +1,595 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="en" lang="en" dir="ltr">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script>
+    (function(_,e,rr,s){_errs=[s];var c=_.onerror;_.onerror=function(){var a=arguments;_errs.push(a);
+    c&&c.apply(this,a)};var b=function(){var c=e.createElement(rr),b=e.getElementsByTagName(rr)[0];
+    c.src="//beacon.errorception.com/"+s+".js";c.async=!0;b.parentNode.insertBefore(c,b)};
+    _.addEventListener?_.addEventListener("load",b,!1):_.attachEvent("onload",b)})
+    (window,document,"script","4e7c8fce06a9ab05530008e5");
+</script>
+
+
+
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+
+    <title>Tutorial on Game Theory | CodeChef</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="programming, language, algorithm, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM" />
+<link rel="shortcut icon" href="/misc/favicon.ico" type="image/x-icon" />
+    <link type="text/css" rel="stylesheet" media="all" href="http://www.codechef.com/sites/default/files/css/css_6b236bf19796bc8b2900d25c23318d10.css" />
+    <script type="text/javascript" src="/sites/all/modules/jquery_update/replace/jquery.min.js?O"></script>
+<script type="text/javascript" src="/misc/drupal.js?O"></script>
+<script type="text/javascript" src="/misc/jquery-popup-overlay/popupoverlay.js?O"></script>
+<script type="text/javascript" src="/sites/all/modules/codechef_common_functions/js/keybinding.js?O"></script>
+<script type="text/javascript" src="/sites/all/modules/codechef_common_functions/js/codechefGenericModal.js?O"></script>
+<script type="text/javascript" src="/sites/all/modules/codechef_todo/js/todo_notification.js?O"></script>
+<script type="text/javascript" src="/sites/all/modules/fbmod/js/fb_sdk.js?O"></script>
+<script type="text/javascript" src="/sites/all/modules/codechef_common_functions/codechef_common_functions.js?O"></script>
+<script type="text/javascript" src="/sites/all/modules/fivestar/js/fivestar.js?O"></script>
+<script type="text/javascript" src="/sites/all/modules/lightbox2/js/lightbox.js?O"></script>
+<script type="text/javascript" src="/sites/all/modules/nice_menus/nice_menus.js?O"></script>
+<script type="text/javascript" src="/misc/common.js?O"></script>
+<script type="text/javascript" src="/sites/all/modules/tableofcontents/jquery.scrollTo-min.js?O"></script>
+<script type="text/javascript" src="/sites/all/modules/tableofcontents/jquery.localscroll-min.js?O"></script>
+<script type="text/javascript" src="/sites/all/modules/tableofcontents/tableofcontents.js?O"></script>
+<script type="text/javascript" src="/sites/all/modules/codechef_recent_comments/codechef_recent_comments.js?O"></script>
+<script type="text/javascript" src="/misc/textarea.js?O"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","username":"rishikeshfanse","fivestar":{"titleUser":"Your rating: ","titleAverage":"Average: ","feedbackSavingVote":"Saving your vote...","feedbackVoteSaved":"Your vote has been saved.","feedbackDeletingVote":"Deleting your vote...","feedbackVoteDeleted":"Your vote has been deleted."},"lightbox2":{"rtl":0,"file_path":"\/(\\w\\w\/)sites\/default\/files","default_image":"\/sites\/all\/modules\/lightbox2\/images\/brokenimage.jpg","border_size":10,"font_color":"000","box_color":"eeedec","top_position":"","overlay_opacity":"0.8","overlay_color":"000","disable_close_click":1,"resize_sequence":0,"resize_speed":400,"fade_in_speed":400,"slide_down_speed":600,"use_alt_layout":0,"disable_resize":0,"disable_zoom":0,"force_show_nav":0,"show_caption":true,"loop_items":0,"node_link_text":"View Image Details","node_link_target":0,"image_count":"Image !current of !total","video_count":"Video !current of !total","page_count":"Page !current of !total","lite_press_x_close":"press \u003ca href=\"#\" onclick=\"hideLightbox(); return FALSE;\"\u003e\u003ckbd\u003ex\u003c\/kbd\u003e\u003c\/a\u003e to close","download_link_text":"","enable_login":false,"enable_contact":false,"keys_close":"c x 27","keys_previous":"p 37","keys_next":"n 39","keys_zoom":"z","keys_play_pause":"32","display_image_size":"original","image_node_sizes":"()","trigger_lightbox_classes":"","trigger_lightbox_group_classes":"","trigger_slideshow_classes":"","trigger_lightframe_classes":"","trigger_lightframe_group_classes":"","custom_class_handler":0,"custom_trigger_classes":"","disable_for_gallery_lists":true,"disable_for_acidfree_gallery_lists":true,"enable_acidfree_videos":true,"slideshow_interval":5000,"slideshow_automatic_start":true,"slideshow_automatic_exit":true,"show_play_pause":true,"pause_on_next_click":false,"pause_on_previous_click":true,"loop_slides":false,"iframe_width":500,"iframe_height":70,"iframe_border":1,"enable_video":0}});
+//--><!]]>
+</script>
+  </head>
+  <body ><center>
+    <div id="header" class="wrapper">
+      <div class="inner-wrapper">
+        <!-- Header -->
+        <div id="logo-floater" class="cols-2">
+        <a href="/" title=""><img src="/sites/all/themes/abessive/logo.png" alt="CodeChef is a non-commercial competitive programming community" id="logo" /><span></span></a>        </div>
+		<div class="cols-2">
+			<div id="custom-login">
+				<div id="user-bar">
+                <div class="login-user">
+                    <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>
+        <span>
+            Hello rishikeshfanse! <br />
+            <a href="/users/rishikeshfanse" title="Edit Your Account">Account</a>
+            or <a href="/logout">Log Out</a>
+        </span></td>
+                        </tr>
+                    </table>
+                </div></div>
+        <div id="facebook-login">
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>Login or<br>Signup with</td>
+                    <td>
+                        <span class="facebook-button">
+                            <a href = "/fb/auth?src=wiki/tutorial-game-theory"><img src ='/sites/all/modules/fbmod/images/fb-connect.jpg' alt='Facebook button' title='Facebook button' width='76' height='22' id='fb-button' onmouseover='this.src="/sites/all/modules/fbmod/images/fb-connect-hover.jpg"'
+onmouseout='this.src="/sites/all/modules/fbmod/images/fb-connect.jpg"' /></a>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </div>    
+        <div class="question-note">
+            <a href="#">
+                <span class="icon-question">Note</span>
+                <div class="fb-help-tooltip">
+                    <ul>
+                        <li>Publicize your achievements on your Facebook Wall.</li>
+                        <li>Challenge your friends or ask them for help.</li>
+                    </ul>
+                </div>
+            </a>
+        </div>                            <div title='My Todo list' class="notification-box-todo">
+                <img id="todo-notification-icon" src="/sites/all/themes/abessive/images/notification-icon.png" border="0" />
+                <div class="notification-counter"></div>
+                <div class="notification-listbox"></div>
+            </div>        	</div>
+        	
+        	<div id="block-nice_menus-1" class="block block-nice_menus block-header">
+  <div class="content">
+    <h2><span class="nice-menu-hide-title">Site Navigation</span></h2>    <ul class="nice-menu nice-menu-down" id="nice-menu-1"><li id="menu-302" class="menuparent menu-path-problems-easy"><a href="/problems/easy" title="">PRACTICE</a><ul><li id="menu-5215" class="menu-path-ide"><a href="/ide" title="">Code, Compile &amp; Run</a></li>
+<li id="menu-303" class="menu-path-problems-easy"><a href="/problems/easy" title="">Easy</a></li>
+<li id="menu-304" class="menu-path-problems-medium"><a href="/problems/medium" title="">Medium</a></li>
+<li id="menu-305" class="menu-path-problems-hard"><a href="/problems/hard" title="">Hard</a></li>
+<li id="menu-1819" class="menu-path-problems-challenge"><a href="/problems/challenge" title="">Challenge</a></li>
+<li id="menu-1376" class="menu-path-problems-extcontest"><a href="/problems/extcontest" title="">Peer</a></li>
+<li id="menu-2602" class="menu-path-problems-school"><a href="/problems/school" title="">School</a></li>
+</ul>
+</li>
+<li id="menu-309" class="menuparent menu-path-contests"><a href="/contests" title="">COMPETE</a><ul><li id="menu-2203" class="menu-path-www.codechef.com-contests"><a href="http://www.codechef.com/contests" title="">All Contests</a></li>
+<li id="menu-5216" class="menu-path-www.codechef.com-COOK55"><a href="http://www.codechef.com/COOK55" title="">January Cook-Off 2015</a></li>
+<li id="menu-5209" class="menu-path-www.codechef.com-JAN15"><a href="http://www.codechef.com/JAN15" title="">January Challenge 2015</a></li>
+<li id="menu-5208" class="menu-path-www.codechef.com-LTIME19"><a href="http://www.codechef.com/LTIME19" title="">December Lunchtime 2014</a></li>
+</ul>
+</li>
+<li id="menu-138" class="menuparent menu-path-discuss.codechef.com-"><a href="http://discuss.codechef.com/" title="">DISCUSS</a><ul><li id="menu-139" class="menu-path-discuss.codechef.com-"><a href="http://discuss.codechef.com/" title="">Forums</a></li>
+<li id="menu-140" class="menu-path-blog.codechef.com-"><a href="http://blog.codechef.com/" title="">Blog</a></li>
+<li id="menu-920" class="menu-path-wiki-"><a href="/wiki/" title="">Wiki</a></li>
+<li id="menu-2202" class="menu-path-https--www.facebook.com-CodeChef"><a href="https://www.facebook.com/CodeChef" title="">Facebook</a></li>
+<li id="menu-141" class="menu-path-www.twitter.com-codechef"><a href="http://www.twitter.com/codechef" title="">Twitter</a></li>
+</ul>
+</li>
+<li id="menu-143" class="menuparent menu-path-node-124098"><a href="/community" title="">COMMUNITY</a><ul><li id="menu-733" class="menu-path-node-6437643"><a href="/hostyourcontest" title="Hosting Contest on CodeChef">Host your Contest</a></li>
+<li id="menu-2310" class="menu-path-www.codechef.com-goforgold"><a href="http://www.codechef.com/goforgold" title="">Go for Gold</a></li>
+<li id="menu-3830" class="menu-path-www.codechef.com-campus_chapter-about"><a href="http://www.codechef.com/campus_chapter/about" title="">Campus Chapter</a></li>
+</ul>
+</li>
+<li id="menu-147" class="menuparent menu-path-node-3"><a href="/help" title="">HELP</a><ul><li id="menu-643" class="menu-path-www.codechef.com-wiki-faq"><a href="http://www.codechef.com/wiki/faq" title="">Frequently Asked Questions</a></li>
+<li id="menu-710" class="menu-path-www.codechef.com-wiki-faq-problem-setters"><a href="http://www.codechef.com/wiki/faq-problem-setters" title="">FAQ for problem setters</a></li>
+<li id="menu-1389" class="menu-path-node-313543"><a href="/problemsetting" title="Codechef Problem Creation">Problem Setting</a></li>
+<li id="menu-850" class="menu-path-www.codechef.com-wiki-tutorials"><a href="http://www.codechef.com/wiki/tutorials" title="">Tutorials</a></li>
+<li id="menu-2200" class="menu-path-www.codechef.com-long-ranklist-AX"><a href="http://www.codechef.com/long/ranklist/AX" title="Long contest rankings list">Long Contest Ranks</a></li>
+<li id="menu-2199" class="menu-path-www.codechef.com-short-ranklist-AX"><a href="http://www.codechef.com/short/ranklist/AX" title="Short contest rankings list">Short Contest Ranks</a></li>
+<li id="menu-4881" class="menu-path-www.codechef.com-ltime-all-ranklist-AX"><a href="http://www.codechef.com/ltime/all/ranklist/AX" title="">Lunchtime Ranks (all)</a></li>
+<li id="menu-4882" class="menu-path-www.codechef.com-ltime-school-ranklist-AX"><a href="http://www.codechef.com/ltime/school/ranklist/AX" title="">Lunchtime Ranks (school)</a></li>
+<li id="menu-1820" class="menu-path-node-503865"><a href="/event-calendar" title="Event Calendar">Event Calendar</a></li>
+<li id="menu-2372" class="menu-path-discuss.ww2.codechef.com-top-users-"><a href="http://discuss.ww2.codechef.com/top/users/" title="">Top Contributors on Discuss</a></li>
+</ul>
+</li>
+<li id="menu-150" class="menuparent menu-path-node-1"><a href="/aboutus_old" title="">ABOUT</a><ul><li id="menu-151" class="menu-path-node-6479484"><a href="/aboutus" title="">About CodeChef</a></li>
+<li id="menu-849" class="menu-path-www.codechef.com-team"><a href="http://www.codechef.com/team" title="Team CodeChef">Team CodeChef</a></li>
+<li id="menu-708" class="menu-path-node-157468"><a href="/press" title="Press Room">Press Room</a></li>
+<li id="menu-1312" class="menu-path-www.codechef.com-financials-"><a href="http://www.codechef.com/financials/" title="">CodeChef Financials</a></li>
+<li id="menu-709" class="menu-path-node-157470"><a href="/ceoscorner" title="CEO&#039;s Corner">CEO&#039;s Corner</a></li>
+<li id="menu-1858" class="menu-path-www.codechef.com-contactus"><a href="http://www.codechef.com/contactus" title="">Contact Us</a></li>
+<li id="menu-152" class="menu-path-www.directi.com-"><a href="http://www.directi.com/" title="">About Directi</a></li>
+</ul>
+</li>
+</ul>
+  </div>
+</div>
+		</div>
+
+      </div>
+    </div>
+    <!-- /HEADER -->
+	<center>
+	<table cellspacing="0" cellpadding="10" id="maintable" class="maintable">
+		<tr>
+			<td class="content" width="99%">
+				<div class="wrapper" id="content-regions">
+					<div class="inner-wrapper rounded-cr-body">
+						<div class="rounded-cr-header">
+							<div class="rounded-cr-footer">
+								<div id="breadcrumb"><div class="breadcrumb"><a href="/">Home</a>&nbsp;&raquo;&nbsp;<a href="/wiki">Wiki</a>&nbsp;&raquo;&nbsp;Tutorial on Game Theory</div></div>
+								<div id="primary-colum-pad">
+									<div id="primary-colum-wrapper">
+									<img width="946px" class="content-wrapper-header" src="/sites/all/themes/abessive/images/content-wrapper-top-big.gif"/>
+										<div id="problem-page">
+											<div class="prob">
+												<div class="primary-col-wrapper">
+												<table class=pagetitle-prob width=100%>
+												    <tr>
+													<td><h1>Tutorial on Game Theory </h1></td>
+													<td>
+																										<div id="tabs-wrapper" class="clear-block">													<ul class="button-list">
+<li class="active" ><a href="/wiki/tutorial-game-theory" class="active">View</a></li>
+<li ><a href="/node/265530/revisions">Revisions</a></li>
+</ul>
+</div>													</td>
+												    </tr>
+												</table>
+													
+										    
+
+																								        																										<div>
+														<div id="node-265530" class="node clear-block">
+
+  <div class="meta">
+  
+    </div>
+
+ <div class="content">
+    <p><b>Overview : </b><br />The most important assumption in a <a class="freelinking external" href="http://www.thelearningpoint.net/home/mathematics/an-introduction-to-game-theory">2 player game</a> is that both the  players play optimally ie. at every step they will make a move which  maximizes their chances of winning the game. In this article we will  give a brief introduction to 2 player impartial games. Impartial games  are those games where there is no restriction on any player's moves  due to his identity. <br />We will discuss two different games which are of exactly the same  nature and then see how they can be approached. <br /> <br /><b>Problem : </b><br />Wythoff's Game. <br />This is a classic <a class="freelinking external" href="http://www.thelearningpoint.net/home/mathematics/an-introduction-to-game-theory">Game theory</a> example. The rules of this game are as  follows : <br />* There are two <a href="http://www.thelearningpoint.net/computer-science/data-structures-heaps-with-c-program-source-code">heaps</a> containing n1 and n2 objects. <br />* Two players play alternately, they can pick any number of objects  from one of these piles or pick 'k' objects from each of these piles(k  &lt;= minimum of both the piles). <br />* The player picking up the last object or set of objects wins. <br /> <br />Since this is an impartial game and both the players play optimally,  we can say that given a certain starting configuration its already  decided who is going to win the game. Lets understand why this works. <br />Let  'C1' be the starting configuration of the game. Player 1(plays  the first move) makes a move M1, leading to a new configuration 'C2'. <br />Since player 1 plays optimally, he will consider the move which  maximizes his chances of winning the game. If there is atleast one set  of sequence from the start which is leading to player 1's victory,  then he will anticipate that sequence and play the move which is  compliant with that sequence. <br />While determining that sequence, player 1 also took into consideration  that within that sequence, whenever player 2 gets to play, if he has a  chance to make the remaining sequence favorable to his victory, he  will do that  immediately. <br />Its important to understand that, given a certain starting  configuration, there are only two exhaustive possibilities ie. playing  optimally, either player 1 will win or lose. And as described above  even if there is one set of sequences where every move is optimal and  player 1 is winning, he will consider that move. <br /> <br />Coming back to Wythoff's Game, suppose there was 1 object in the first  heap(H1) and 2 objects in the second(H2). <br />We denote the status of the game by {n1,n2} where n1 is the number of  objects in first heap and n2 in the other. <br />"--&gt;" denotes transition after a move is made. <br /> <br />When the game starts, player 1 has the following moves : <br />{1,2} --&gt; {0,2} pick one from H1 <br />{1,2} --&gt; {0,1} pick 1 each from H1 and H2 <br />{1,2} --&gt; {1,0} pick 2 from H2 <br /> <br />note that, after any of these moves, <br />exactly in one move, player 2 is going to win. <br />{0,2} --&gt; {0,0} pick 2 from H2 <br />{1,1} --&gt; {0,0} pick 1 from H1 and H2 <br />{1,0} --&gt; {0,0} pick 1 from H2 <br /> <br />So no matter what move player 1 plays, he cannot win this game. There  is no sequence which leads to player 1's victory. <br /> <br />Let us consider the case where starting configuration of the game is {2,2} <br />We have already seen that from {1,2} , the player playing the move  cannot win. So if the starting configuration is {2,2}, player 1 picks  up one object from H1 and gives the configuration {1,2} to player 2.  Now no matter what move player 2 plays, he is going to loose. He could  have also sent player 2 to an alternate configuration {2,1} which is  symmetrical to the {1,2} and hence leading to the same result. <br />We call these positions from where victory is guaranteed to be   <b class="moz-txt-star"><span class="moz-txt-tag">*</span>winning positions<span class="moz-txt-tag">*</span></b>. And positions from where no matter what move one  plays, one always looses to be <b class="moz-txt-star"><span class="moz-txt-tag">*</span>loosing positions<span class="moz-txt-tag">*</span></b>. Now we need to  figure out all the loosing and winning position for Wythoff's game. <br />{0,0} is a loosing position because, the other player has played his  move and got the other player to the configuration to {0,0}. Now  player with his turn has no move to play leading to his defeat. <br /> <br />All those position from which {0,0} can be reached in one move are  winning positions, because the player plays that move and wins by  definition of the Wythoff's game. So to find whether a position {i,j}  is winning or loosing, we draw a 2-D grid. <br />All configuration of the form {i,i} or {0,i} or {i,0} are winning  positions and we mark them in the grid. <br />'*' indicates yet to be determined. <br />'L' indicates a loosing position. <br />'W' indicates a winning position. <br /> <br />L W W W W W W... <br />W W * * * * * * * ....... <br />W * W * * * * * * ....... <br />W *  * W * * * * *....... <br />W *  *  * W * * * *...... <br />W *  *   *  * W * * ...... <br />.................................. <br />Considering 0 based indexing in the grid, position i,j in the grid  indicates the configuration {i,j} of the game (i remaining in H1 and j  remaining in H2). <br /> <br />Its evident from the rules of the game that the player can either move  horizontally towards left in the grid(pick from H1) or vertically up  in the grid (pick up from H2) or digonally towards 0,0 (pick a certain  'k' number from each <a href="http://www.thelearningpoint.net/computer-science/data-structures-heaps-with-c-program-source-code">heap</a>). <br />So from position {1,2} ( (1,2) in grid ) he can only move to all  positions which are marked 'W'. <br />Same for position {2,1} ( (2,1) in grid ) <br />Hence they both are loosing positions. <br /> <br />L W W W W W W... <br />W W L * * * * * * ....... <br />W L W * * * * * * ....... <br />W *  * W * * * * *....... <br />W *  *  * W * * * *...... <br />W *  *   *  * W * * ...... <br />.................................. <br /> <br />Now all those positions from where we can reach either (1,2) or (2,1)  in the grid, by making a move according to the rules of the game are  winning positions. A move is removing some from one or a certain from  both, thus all points in the grid of the form (1+i,2+i) or (1+i,2) or  (1,2+i) <br />or (2+i,1+i) or (2,1+i) or (2+i,1) are  winning positions, since from  these, in one move, one can force the opponent to reach a loosing  position (1,2) or (2,1). Marking these positions as winning positions : <br /> <br />L W W W W W W... <br />W W L W W W W .. <br />W L W W W W W .. <br />W W W W W * * .... <br />W W W  W W W *.. <br />W W W   *  W W W <br />.................................. <br /> <br />And accordingly we mark the remaining positions. <br />To find out for a starting configuration (i,j), its safe to construct  a grid of size max(i,j) x max(i,j). <br />Hence we determine the result of the game given a certain starting  configuration. <br /> <b><br />Referenced articles : </b><br /><a class="moz-txt-link-freetext" href="http://sps.nus.edu.sg/%7Elimchuwe/cgt/">http://sps.nus.edu.sg/~limchuwe/cgt/</a> <br /><a class="moz-txt-link-freetext" href="http://www.topcoder.com/tc?module=Static&amp;d1=tutorials&amp;d2=algorithmGames">http://www.topcoder.com/tc?module=Static&amp;d1=tutorials&amp;d2=algorithmGames</a> <br /><a class="moz-txt-link-freetext" href="http://www.madras.fife.sch.uk/maths/games/">http://www.madras.fife.sch.uk/maths/games/</a> <br /><a class="moz-txt-link-freetext" href="http://en.wikipedia.org/wiki/Game_theory">http://en.wikipedia.org/wiki/Game_theory</a> <br /> <br /><b>Sample problem on basic <a href="http://www.thelearningpoint.net/home/mathematics/an-introduction-to-game-theory">Game Theory</a> :</b><br /><a class="moz-txt-link-freetext" href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=6856">http://www.topcoder.com/stat?c=problem_statement&amp;pm=6856</a> <br /> <br /><b>Sample problems on advanced <a href="http://www.thelearningpoint.net/home/mathematics/an-introduction-to-game-theory">Game Theory</a> (This tutorial is a very basic  introduction to <a href="http://www.thelearningpoint.net/home/mathematics/an-introduction-to-game-theory">Game Theory</a> and it is recommended that one should read  the referenced articles before attempting these) </b>:<br /><a class="moz-txt-link-freetext" href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=2987&amp;rd=5862">http://www.topcoder.com/stat?c=problem_statement&amp;pm=2987&amp;rd=5862</a> <br /><a class="moz-txt-link-freetext" href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7424">http://www.topcoder.com/stat?c=problem_statement&amp;pm=7424</a> <br /><a class="moz-txt-link-freetext" href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=6239">http://www.topcoder.com/stat?c=problem_statement&amp;pm=6239</a></p>
+<br />
+<p><h4><a href="http://www.thelearningpoint.net/home/mathematics/an-introduction-to-game-theory">A General Introduction to Game Theory -  Tutorial with Solved Examples</a><h4></h4></h4></p> 
+<p><h4><a href="http://www.thelearningpoint.net/home/mathematics/a-totorial-on-extensive-games-with-problems-and-solutions">Extensive Games - A Game Theory Tutorial with Solved Examples</a></h4></p> 
+<p><h4><a href="http://www.thelearningpoint.net/home/mathematics/bayesian-games---games-with-incomplete-information">Bayesian Games - A Game Theory Tutorial with Solved Examples</a></h4></p> 
+<p><h4><a href="http://www.thelearningpoint.net/home/mathematics/repeated-games---tutorial-and-solved-problems">Game Theory : Repeated Games - A Tutorial with Solved Examples</a></h4></p> </div>
+
+ <hr />
+  <h2 style="text-decoration: none;">Comments</h2>
+  </div>
+
+<div id="comments">
+  <a id="comment-12234"></a>
+<div id="c12234" class="comment clear-block">
+  
+
+  <h3><a href="/wiki/tutorial-game-theory#comment-12234" class="active">&quot;When the game starts, player</a></h3>
+
+  <div class="submitted">
+    <strong><a href="/users/anirudh24seven">anirudh24seven</a></strong><span style="color:#828282"> @ 5 Dec 2010 10:06 AM</span>  </div>
+
+  <div class="content">
+    <div class="comment-body"><p>"<span>When the game starts, player 1 has the following moves : </span></p>
+<p><span>{1,2} --&gt; {0,2} pick one from H1 <br />{1,2} --&gt; {1,1} pick 1 from H1 and H2 "</span></p>
+<p>How is the second statement correct ?</p></div>
+      
+    <div class="comment-moderation-links"><ul class="links"><li class="comment_reply first last"><a href="/comment/reply/265530/12234">reply</a></li>
+</ul></div>
+  </div>
+  
+</div>
+<a id="comment-12569"></a>
+<div id="c12569" class="comment clear-block">
+  
+
+  <h3><a href="/wiki/tutorial-game-theory#comment-12569" class="active">thanks admin a very good and</a></h3>
+
+  <div class="submitted">
+    <strong><a href="/users/pawank">pawank</a></strong><span style="color:#828282"> @ 27 Dec 2010 09:04 AM</span>  </div>
+
+  <div class="content">
+    <div class="comment-body"><p>thanks admin a very good and explanatory tutoorial</p></div>
+      
+    <div class="comment-moderation-links"><ul class="links"><li class="comment_reply first last"><a href="/comment/reply/265530/12569">reply</a></li>
+</ul></div>
+  </div>
+  
+</div>
+<a id="comment-15053"></a>
+<div id="c15053" class="comment clear-block">
+  
+
+  <h3><a href="/wiki/tutorial-game-theory#comment-15053" class="active">@anirudh S
+ya its wrong,</a></h3>
+
+  <div class="submitted">
+    <strong><a href="/users/saurajeet">saurajeet</a></strong><span style="color:#828282"> @ 14 Mar 2011 06:56 PM</span>  </div>
+
+  <div class="content">
+    <div class="comment-body"><p>@anirudh S</p>
+<p>ya its wrong, {1,2} --&gt; {0,1}</p></div>
+      
+    <div class="comment-moderation-links"><ul class="links"><li class="comment_reply first last"><a href="/comment/reply/265530/15053">reply</a></li>
+</ul></div>
+  </div>
+  
+</div>
+<a id="comment-20416"></a>
+<div id="c20416" class="comment clear-block">
+  
+
+  <h3><a href="/wiki/tutorial-game-theory#comment-20416" class="active">&quot;When the game starts, player</a></h3>
+
+  <div class="submitted">
+    <strong><a href="/users/cyberax">cyberax</a></strong><span style="color:#828282"> @ 12 Dec 2011 04:51 PM</span>  </div>
+
+  <div class="content">
+    <div class="comment-body">"When the game starts, player 1 has the following moves :"
+and you forgot : {1,2} --&gt; {1,1} pick 1 from H2.</div>
+      
+    <div class="comment-moderation-links"><ul class="links"><li class="comment_reply first last"><a href="/comment/reply/265530/20416">reply</a></li>
+</ul></div>
+  </div>
+  
+</div>
+<a id="comment-29350"></a>
+<div id="c29350" class="comment clear-block">
+  
+
+  <h3><a href="/wiki/tutorial-game-theory#comment-29350" class="active">The following links return</a></h3>
+
+  <div class="submitted">
+    <strong><a href="/users/poojits">poojits</a></strong><span style="color:#828282"> @ 17 Jul 2012 08:28 AM</span>  </div>
+
+  <div class="content">
+    <div class="comment-body">The following links return 404
+<a href="http://sps.nus.edu.sg/~limchuwe/cgt/" title="http://sps.nus.edu.sg/~limchuwe/cgt/">http://sps.nus.edu.sg/~limchuwe/cgt/</a> 
+<a href="http://www.madras.fife.sch.uk/maths/games/" title="http://www.madras.fife.sch.uk/maths/games/">http://www.madras.fife.sch.uk/maths/games/</a>
+Anyone have alternatives?</div>
+      
+    <div class="comment-moderation-links"><ul class="links"><li class="comment_reply first last"><a href="/comment/reply/265530/29350">reply</a></li>
+</ul></div>
+  </div>
+  
+</div>
+<a id="comment-61114"></a>
+<div id="c61114" class="comment clear-block">
+  
+
+  <h3><a href="/wiki/tutorial-game-theory#comment-61114" class="active">PLEASE UPDATE the &quot;Referenced</a></h3>
+
+  <div class="submitted">
+    <strong><a href="/users/arindam93">arindam93</a></strong><span style="color:#828282"> @ 25 Oct 2013 01:42 AM</span>  </div>
+
+  <div class="content">
+    <div class="comment-body">PLEASE UPDATE the "Referenced articles" section. Only wikipedia link hasn't changed :(</div>
+      
+    <div class="comment-moderation-links"><ul class="links"><li class="comment_reply first last"><a href="/comment/reply/265530/61114">reply</a></li>
+</ul></div>
+  </div>
+  
+</div>
+<a id="comment-71498"></a>
+<div id="c71498" class="comment clear-block">
+  
+
+  <h3><a href="/wiki/tutorial-game-theory#comment-71498" class="active">&quot;pick &#039;k&#039; objects from each</a></h3>
+
+  <div class="submitted">
+    <strong><a href="/users/nookz">nookz</a></strong><span style="color:#828282"> @ 21 Jan 2014 04:36 PM</span>  </div>
+
+  <div class="content">
+    <div class="comment-body">"pick 'k' objects from each of these piles(k &lt;= minimum of both the piles)" 
+According to this statement in the example the player can't take any object at the time of (0,2) 
+Some one pleas clear this to me please</div>
+      
+    <div class="comment-moderation-links"><ul class="links"><li class="comment_reply first last"><a href="/comment/reply/265530/71498">reply</a></li>
+</ul></div>
+  </div>
+  
+</div>
+<a id="comment-71499"></a>
+<div id="c71499" class="comment clear-block">
+  
+
+  <h3><a href="/wiki/tutorial-game-theory#comment-71499" class="active">Read the problem statement</a></h3>
+
+  <div class="submitted">
+    <strong><a href="/users/suresh301190">suresh301190</a></strong><span style="color:#828282"> @ 21 Jan 2014 04:54 PM</span>  </div>
+
+  <div class="content">
+    <div class="comment-body">Read the problem statement Again it is written "pick any no. of objects from H1/H2 OR pick k from both.". Even I thought that was a mistake..</div>
+      
+    <div class="comment-moderation-links"><ul class="links"><li class="comment_reply first last"><a href="/comment/reply/265530/71499">reply</a></li>
+</ul></div>
+  </div>
+  
+</div>
+<a id="comment-88220"></a>
+<div id="c88220" class="comment clear-block">
+  
+
+  <h3><a href="/wiki/tutorial-game-theory#comment-88220" class="active">{1,2} --&gt; {1,1} --&gt;</a></h3>
+
+  <div class="submitted">
+    <strong><a href="/users/shubham31516">shubham31516</a></strong><span style="color:#828282"> @ 14 Oct 2014 11:17 AM</span>  </div>
+
+  <div class="content">
+    <div class="comment-body">{1,2} --&gt; {1,1} --&gt; {0,0}
+{1,2}  --&gt;{0,2} --&gt; {0,0}
+{1,2} --&gt; {1,0} --&gt; {0,0}
+So ultimately he loses. There can be number of ways but the result will be same.</div>
+      
+    <div class="comment-moderation-links"><ul class="links"><li class="comment_reply first last"><a href="/comment/reply/265530/88220">reply</a></li>
+</ul></div>
+  </div>
+  
+</div>
+<div class="box">
+  <h2 class="title"><hr></h2>  <div class="content"><span style="font-weight:bold;color:#777;">Need help? Post a comment. But before that please spare a moment to read the <a href="http://discuss.codechef.com/questions/855/what-kind-of-comment-should-i-post-on-the-problem-page" target="_blank">guidelines</a>.</span><form action="/comment/reply/265530"  accept-charset="UTF-8" method="post" id="comment-form">
+<div><div class="form-item">
+ <label>Your name: </label>
+ rishikeshfanse
+</div>
+<div class="form-item" id="edit-comment-wrapper">
+ <label for="edit-comment">Comment: <span class="form-required" title="This field is required.">*</span></label>
+ <textarea cols="60" rows="5" name="comment" id="edit-comment"  class="form-textarea resizable required"></textarea>
+</div>
+<input type="hidden" name="form_build_id" id="form-6a128c53d14ab75c71c5ff4d8177653d" value="form-6a128c53d14ab75c71c5ff4d8177653d"  />
+<input type="hidden" name="form_token" id="edit-form-token" value="bb568ede2deee119700151e5422c7400"  />
+<input type="hidden" name="form_id" id="edit-comment-form" value="comment_form"  />
+<input type="submit" name="op" id="edit-submit" value="Save"  class="form-submit" />
+
+</div></form>
+</div>
+</div>
+</div>
+<div id="block-block-68" class="block block-block">
+  <div class="r1 t"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div><div class="r5"></div>
+  <div class="content">
+        <div style='display:none;'>
+online compiler, online ide, learn programming online, programming online, run code online, online debugging tool, online interpreter, run code online, run code ,execute code, python ide, C++ ide, C ide, Perl ide, Java ide, PHP ide, JavaScript ide, Node.js ide, Haskell ide, C++11 ide, Pascal ide, Fortran ide, Whitespace ide, ADA 95 ide, Ocaml ide, Intercal ide, C ide, Brainf**k ide, Assembler ide, Clips ide, Prolog ide, Icon ide, Ruby ide, Scheme ide, Pike ide, D ide, Smalltalk ide, JAR ide, Nice ide, Lu aide, C# ide, Bash ide, PHP ide, Nemerle ide, Common Lisp, Scheme ide, C99 strict ide, Erlang ide, Tcl ide, Scala ide, Perl6 ide, Text ide, Clojure ide, Go ide, Python3 ide, F# ide
+</div>
+  </div>
+  <div class="r5"></div><div class="r4"></div><div class="r3"></div><div class="r2"></div><div class="r1 b"></div>
+</div>
+													</div>
+												</div>
+											</div>
+											<img class="content-wrapper-header" src="/sites/all/themes/abessive/images/content-wrapper-bootm-big.gif"/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+        <div id="footer" class="wrapper">
+      <!--<div class="r1 t"></div><div class="r2"></div><div class="r3"></div><div class="r4"></div><div class="r5"></div>-->
+      <div class="content clear-block">
+        <!-- Footer Contents -->
+        <div id="block-block-13" class="block block-block block-header">
+  <div class="content">
+        <script language="javascript" type="text/javascript">
+function formatTime(ts) {
+  now = new Date(ts);
+ 
+  localtime = new Date();
+  hour = now.getHours();
+  min = now.getMinutes();
+  sec = now.getSeconds();
+  
+  if (min <= 9) {
+	 min = "0" + min;
+  }
+  if (sec <= 9) {
+	 sec = "0" + sec;
+  }
+  if (hour > 12) {
+	 hour = hour - 12;
+	 add = " PM";
+  } else {
+	 hour = hour;
+	 add = " AM";
+  }
+  if (hour == 12) {
+	 add = " PM";
+  }
+  if (hour == 00) {
+	 hour = "12";
+  }
+	
+  $('#server-time').html(((hour<=9) ? "0" + hour : hour) + ":" + min + ":" + sec + add);
+  
+  nextSec = (now.getTime() + 1000);
+  
+  setTimeout("formatTime("+nextSec+")", 1000);
+}
+function getDtTimeZone() 
+{
+var rightNow = new Date();
+var toDay = new Date(rightNow.getFullYear(), 0, 1, 0, 0, 0, 0);
+var temp = toDay.toGMTString();
+var date2 = new Date(temp.substring(0, temp.lastIndexOf(" ") -1));
+var stdTime = (toDay - date2) / (1000 * 60 * 60);
+return stdTime;
+}
+/*var d=new Date();
+$.ajax({
+url: '/umtza',
+type:'POST',
+data: 'umtza='+d.toString(),
+});
+*/
+</script>
+<div id="disclaimer">CodeChef is a non-commercial competitive programming community</div>
+<div class="inner-wrapper">
+<div class="cols-2">
+<div id="secondary-nav">
+<ul>
+    <li><a href="http://www.codechef.com/aboutus/">About CodeChef</a></li>
+    <li><a target="_blank" href="http://www.directi.com/">About Directi</a></li>
+    <li><a href="http://www.codechef.com/ceoscorner/">CEO's Corner</a></li>
+    <li><a href="http://www.codechef.com/c-programming">C-Programming</a></li>
+    <li><a href="http://www.codechef.com/Programming-Languages">Programming Languages</a></li>
+    <li><a href="http://www.codechef.com/contactus">Contact Us</a></li>
+</ul>
+</div>
+<div id="copyright" class="cols-2">&copy; 2009 <a style="color: rgb(0, 0, 0);" href="http://www.directi.com">Directi Group</a>.  All Rights Reserved.  CodeChef uses SPOJ &copy; by <a style="color: rgb(0, 0, 0);" href="http://www.sphere-research.com">Sphere Research Labs</a></div>
+<div id="copyright-msg">In order to report copyright violations of any kind, send in an email to <a href="mailto:copyright@codechef.com">copyright@codechef.com</a></div>
+</div>
+<div align="right" class="cols-2-right" style="float:right;">
+<div id="sponsor-strip"><a target="_blank" href="http://www.directi.com"><img alt="CodeChef a product of Directi" src="/sites/all/themes/abessive/images/footer-sponsor-strip.gif" /></a><br />
+<span>The time now is: <span id="server-time"></span></span>
+				<script language='javascript'>
+						formatTime('January 17, 2015 19:10:42');
+					</script><br/> Your Ip: 27.97.134.81</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-53602-42']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- Google Code for Visitors that do not sign-up Remarketing List -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1066618556;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "666666";
+var google_conversion_label = "gbUUCPTlhAIQvJ3N_AM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1066618556/?label=gbUUCPTlhAIQvJ3N_AM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- Google Code for RM codechef Remarketing List -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 968176136;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "iDk7CPDZ7wMQiOTUzQM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/968176136/?label=iDk7CPDZ7wMQiOTUzQM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- Start Alexa Certify Javascript -->
+<script type="text/javascript">
+_atrk_opts = { atrk_acct:"q16Cj1a8gN00iz", domain:"codechef.com",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=q16Cj1a8gN00iz" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->  
+
+<div class='cc-footer-seo'>
+<span><a href='/'>CodeChef</a> - A Platform for Aspiring Programmers</span>
+<p>CodeChef was created as a platform to help programmers make it big in the world of algorithms, <strong>computer programming</strong> and <strong>programming contests</strong>. At CodeChef we work hard to revive the geek in you by hosting a <strong>programming contest</strong> at the start of the month and another smaller programming challenge in the middle of the month. We also aim to have training sessions and discussions related to <strong>algorithms, binary search</strong>, technicalities like <strong>array size</strong> and the likes. Apart from providing a platform for <strong>programming competitions</strong>, CodeChef also has various algorithm tutorials and forum discussions to help those who are new to the world of <strong>computer programming</strong>.</p>
+<p></p>
+<span><a href='/problems/easy'>Practice Section</a> - A Place to hone your 'Computer Programming Skills'</span>
+<p>Try your hand at one of our many practice problems and submit your solution in a language of your choice. Our <strong>programming contest</strong> judge accepts solutions in over 35+ programming languages. Preparing for coding contests were never this much fun! Receive points, and move up through the CodeChef ranks. Use our practice section to better prepare yourself for the multiple <strong>programming challenges</strong> that take place through-out the month on CodeChef. </p>
+<p></p>
+<span><a href='/contests/'>Compete</a> - Monthly Programming Contests and Cook-offs</span>
+<p>Here is where you can show off your <strong>computer programming</strong> skills. Take part in our 10 day long monthly <strong>coding contest</strong> and the shorter format Cook-off <strong>coding contest</strong>. Put yourself up for recognition and win great prizes. Our <strong>programming contests</strong> have prizes worth up to Rs.20,000 and $700lots more CodeChef goodies up for grabs. </p>
+<p></p>
+<span><a href='http://discuss.codechef.com/'>Discuss</a></span>
+<p>Are you new to <strong>computer programming</strong>? Do you need help with algorithms? Then be a part of CodeChef's Forums and interact with all our programmers - they love helping out other programmers and sharing their ideas. Have discussions around <strong>binary search, array size, branch-and-bound, Dijkstra's algorithm, Encryption algorithm</strong> and more by visiting the CodeChef Forums and Wiki section.</p>
+<p></p>
+<span><a href='/community'>CodeChef Community</a></span>
+<p>As part of our Educational initiative, we give institutes the opportunity to associate with CodeChef in the form of Campus Chapters. Hosting <strong>online programming competitions</strong> is not the only feature on CodeChef. You can also host a <strong>coding contest</strong> for your institute on CodeChef, organize an <strong>algorithm</strong> event and be a guest author on our blog. </p>
+<p></p>
+<span><a href='/goforgold'>Go For Gold</a></span>
+<p>The Go for Gold Initiative was launched about a year after CodeChef was incepted, to help prepare Indian students for the <strong>ACM ICPC</strong> World Finals competition. In the run up to the <strong>ACM ICPC</strong> competition, the Go for Gold initiative uses CodeChef as a platform to train students for the <strong>ACM ICPC</strong> competition via multiple warm up contests. As an added incentive the Go for Gold initiative is also offering over Rs.8 lacs to the Indian team that beats the 29th position at the <strong>ACM ICPC</strong> world finals. Find out more about the Go for Gold and the <strong>ACM ICPC</strong> competition <a href="/goforgold">here</a>.</p>
+</div>
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0026/8232.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>  </div>
+</div>
+<div id="block-block-48" class="block block-block block-header">
+  <div class="content">
+        <script type ='text/javascript' src ='/misc/jquery.cookie.js'>  </script><script type ='text/javascript' src ='/misc/contest-notification.js?t=1'>  </script>  </div>
+</div>
+<div id="block-block-51" class="block block-block block-header">
+  <div class="content">
+        <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>  </div>
+</div>
+      </div>
+    </div>
+          </center>
+
+    </body>
+</html>

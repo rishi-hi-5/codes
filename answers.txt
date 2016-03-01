@@ -1,0 +1,15 @@
+Why have you choose Barclays and analyst position?
+I want to be a part of Barclays as it is one of the oldest bank and has an incredible history of 300 years. From my research I came to know that it has a lively environment with most experienced people working around also from the seminar presented in my college gave us the idea about the social culture of Barclays. I liked the fact that there would not only be paper work ,but real time work experience. 
+I am applying for the position of analyst as it is good for undergraduate intern to start and get familiar with work environment of a company.
+
+Describe a recent development in the banking industry. What implications might this development have for the division to which you have applied? 
+Big data is the recent development in banking industry which describes any voluminous amount of structured,semi-structured and unstructured data that has potential to be mined for information. The implications of big data on the data analysts is that they have to get known to various methods and technologies which are not at all related to the relational database that they have been working on. The requirement for Real-time data streaming and data mining is stronger than ever. This is the opportunity that makes Data Science and several related fields critical to almost all future analytical tasks.
+
+What do you understand about our Company Values? Give an example of how you have demonstrated one or more of our Values. 
+Barclays are concerned with the given values and I would have demonstrated them as given below
+1) Respect: I will build trust with my coworkers,respecting the senior officials and collaborate proactively with coworker.
+2) Integrity: I will show courage and do the right things
+3) Service and Excellence: I will try performing my work unto the mark.
+4) Stewardship: I will try to improve myself with what I do.
+	
+

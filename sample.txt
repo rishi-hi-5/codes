@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Cake Delights Web Template</title>
+	<link rel="stylesheet" href="/../../../preview/shared/previews.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<!--[if IE 8]>
+		<link rel="stylesheet" type="text/css" href="css/ie8.css">
+	<![endif]-->
+	<!--[if IE 7]>
+		<link rel="stylesheet" type="text/css" href="css/ie7.css">
+	<![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="/preview/shared/previews.css" />
+
+	
+	<!-- Google Analytics -->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	ga('create', 'UA-241068-1', 'auto');
+	ga('send', 'pageview');
+	
+	</script>
+	<!-- End Google Analytics -->
+	
+
+	<script src="/js/jquery/jquery-1.11.0.min.js"></script>	
+		
+	<script src="/js/xenforo/xenforo.js?_v=4d960095"></script>
+
+
+	<script>
+	$(document).ready(function() {
+		$("a[data-ga-event='click']").each(
+			function() {
+				if ($(this).data("gaCategory") && $(this).data("gaAction") && $(this).data("gaLabel")) {
+					//console.log($(this).data("gaCategory") + " - " + $(this).data("gaAction") + " - " + $(this).data("gaLabel"));
+					$(this).on('click', function() {
+						ga('send', 'event', $(this).data("gaCategory"), $(this).data("gaAction"), $(this).data("gaLabel"));
+						Piwik.getAsyncTracker().trackEvent($(this).data("gaCategory"), $(this).data("gaAction"), $(this).data("gaLabel"));
+					});
+				} else {
+					console.error("missing attributes for google analytics event tracking");
+				}
+			}
+		);
+	});
+	</script>
+
+</head>
+<body> <!-- Start Fixed Template Info Header -->
+	<div id="templateInfo">
+		<div>
+			<h2><a target="_blank" href="/">&nbsp;<!-- FREE WEBSITE TEMPLATES --></a></h2>
+				<ul class="navigation">
+					<li class="edit"><a rel="nofollow" href="/use/cakewebsitetemplate/" data-ga-event="click" data-ga-category="Previews Top Bar" data-ga-action="Ad Click" data-ga-label="Cake Website Template">Design</a></li>
+
+					<li class="download"><a href="/download/cakewebsitetemplate/" data-ga-event="click" data-ga-category="Previews Top Bar" data-ga-action="Download Click" data-ga-label="Cake Website Template">Download</a></li>     
+					<li class="discuss"><a href="/discuss/cakewebsitetemplate/" data-ga-event="click" data-ga-category="Previews Top Bar" data-ga-action="Discuss Click" data-ga-label="Cake Website Template">Discuss</a></li>     		     
+				</ul>
+		</div>
+	</div>  
+	<div id="clearance">&nbsp;</div>
+	<!-- End  Fixed Template Info Header -->
+	<div id="templatePreview"><!-- start of templatePreview Added div to act like a frame-->
+	<a id="web-edit" href="/editor/cakewebsitetemplate/"><img src="/images/website/editor/0_2.png" alt="web-edit"></a>
+
+	<div id="header">
+		<div>
+			<div>
+				<div id="logo">
+					<a href="index.html"><img src="images/logo.gif" alt="Logo"></a>
+				</div>
+				<div>
+					<div>
+						<a href="signup.html">My Account</a>
+
+						<a href="index.html">Help</a>
+						<a href="signin.html" class="last">Sign in</a>
+					</div>
+					<form action="index.html">
+						<div>
+							<input type="text" id="search">
+						</div>
+						<input type="submit" value="Search" id="searchbtn">
+
+					</form>
+				</div>
+			</div>
+			<ul>
+				<li class="current">
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+
+					<a href="product.html">The Pastry shop</a>
+				</li>
+				<li>
+					<a href="about.html">About us</a>
+				</li>
+				<li>
+					<a href="services.html">Services</a>
+
+				</li>
+				<li>
+					<a href="blog.html">Blog</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact Us</a>
+				</li>
+			</ul>
+
+			<div id="section">
+				<ul>
+					<li>
+						<a href="index.html">cheese cakes</a>
+					</li>
+					<li>
+						<a href="index.html">sponge cakes</a>
+					</li>
+
+					<li>
+						<a href="index.html">butter cakes</a>
+					</li>
+					<li class="selected">
+						<a href="index.html">layer cakes</a>
+					</li>
+					<li>
+						<a href="index.html">sheet cakes</a>
+
+					</li>
+					<li>
+						<a href="index.html">cupcakes</a>
+					</li>
+					<li>
+						<a href="index.html">fondant cakes</a>
+					</li>
+					<li>
+
+						<a href="index.html">swiss roll</a>
+					</li>
+					<li>
+						<a href="index.html">other desserts</a>
+					</li>
+				</ul>
+				<a href="index.html" class="figure"><img src="images/wedding-cupcakes-large.jpg" alt="Image"></a>
+			</div>
+
+		</div>
+	</div>
+	<div id="content">
+		<div class="home">
+			<div class="aside">
+				<h1>Welcome to our site</h1>
+				<p>
+					This website template has been designed by <a href="http://www.freewebsitetemplates.com/">Free Website Templates</a> for you, for free. You can replace all this text with your own text. Want an easier solution for a <a rel="nofollow" href="http://www.freewebsitetemplates.com/link/free-website/" data-ga-event="click" data-ga-category="Text Link" data-ga-action="Ad Click" data-ga-label="Previews - Free Website">Free Website</a>? Head straight to <a rel="nofollow" href="http://www.freewebsitetemplates.com/link/wix/" data-ga-event="click" data-ga-category="Text Link" data-ga-action="Ad Click" data-ga-label="Previews - Wix">Wix</a> and immediately start customizing your website! <a rel="nofollow" href="http://www.freewebsitetemplates.com/link/wix/" data-ga-event="click" data-ga-category="Text Link" data-ga-action="Ad Click" data-ga-label="Previews - Wix">Wix</a> is an online website builder with a simple drag &amp; drop interface, meaning you do the work online and instantly publish to the web. Nothing to download, nothing to upload.
+				</p>
+
+				<p>
+					All <a rel="nofollow" href="http://www.freewebsitetemplates.com/link/wix/" data-ga-event="click" data-ga-category="Text Link" data-ga-action="Ad Click" data-ga-label="Previews - Wix">Wix</a> templates are fully customizable and free to use. Just pick one you like, click Edit, and enter the online editor. Change, add, and remove items as you like. <a rel="nofollow" href="http://www.freewebsitetemplates.com/link/wix/" data-ga-event="click" data-ga-category="Text Link" data-ga-action="Ad Click" data-ga-label="Previews - Wix">Wix</a> also offers a ton of free design elements right inside the editor, like images, icons, animation files, and interactive widgets. Publish your <a rel="nofollow" href="http://www.freewebsitetemplates.com/link/free-website/" data-ga-event="click" data-ga-category="Text Link" data-ga-action="Ad Click" data-ga-label="Previews - Free Website">Free Website</a> in minutes! You can remove any link to our website from this website template, you're free to use this website template without linking back to us. If you're having problems editing this website template, then don't hesitate to ask for help on the <a href="http://www.freewebsitetemplates.com/forums/">Forums</a>.
+				</p>
+			</div>
+
+			<div class="section">
+				<div>
+					<h2>The food story</h2>
+					<p>
+						This is just a place holder, so you can see what the site would look like. This is just a place holder, so you can see what the site would look like. This is just a place holder, so you can see what the site would look like. This is just a place holder, so you can see what the site would look like. This is just a place holder, so you can see what the site would look like. This is just a place holder, so you can see what the site would look like.
+					</p>
+				</div>
+				<ul>
+					<li class="first">
+
+						<a href="index.html"><img src="images/cake.jpg" alt="Image"></a>
+					</li>
+					<li>
+						<a href="index.html"><img src="images/burgercake.jpg" alt="Image"></a>
+					</li>
+					<li>
+						<a href="index.html"><img src="images/cupcake.jpg" alt="Image"></a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="home">
+			<div>
+				<div class="aside">
+					<div class="signup">
+						<div>
+
+							<b>Too <span>BUSY</span> to shop?</b>
+							<a href="signup.html">SIGN UP for FREE</a>
+							<p>
+								and we&#39;ll deliver it on your doorstep
+							</p>
+						</div>
+
+					</div>
+					<div class="connect">
+						<span>Follow Us</span>
+						<ul>
+							<li class="googleplus">
+								<a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank">Google&#43;</a>
+							</li>
+							<li class="subscribe">
+
+								<a href="http://www.freewebsitetemplates.com/misc/contact" target="_blank">Subscribe</a>
+							</li>
+							<li class="facebook">
+								<a href="http://freewebsitetemplates.com/go/facebook/" target="_blank">Facebook</a>
+							</li>
+							<li class="twitter">
+								<a href="http://freewebsitetemplates.com/go/twitter/" target="_blank">Twitter</a>
+
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="section">
+					<div>
+						<div>
+							<h3>Daily Cake Surprise</h3>
+
+							<p>
+								This is just a place holder, so you can see what the site would look like. This is just a place holder, so you can see what the site would look like. This is just a place holder, so you can see what the site would look like. This is just a place holder, so you can see what the site would look like. This is just a place holder.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="featured">
+
+			<ul>
+				<li class="first">
+					<a href="blog.html" class="figure"><img src="images/fruit-cake.jpg" alt="Image"></a>
+					<h2>This is just a place holder.</h2>
+					<p>
+						This is just a place holder, so you can see what the site would look like. This is just a place holder.
+					</p>
+				</li>
+				<li>
+
+					<a href="blog.html" class="figure"><img src="images/italian.jpg" alt="Image"></a>
+					<h2>This is just a place holder.</h2>
+					<p>
+						This is just a place holder, so you can see what the site would look like. This is just a place holder.
+					</p>
+				</li>
+				<li>
+					<a href="blog.html" class="figure"><img src="images/fruit.jpg" alt="Image"></a>
+					<h2>This is just a place holder.</h2>
+
+					<p>
+						This is just a place holder, so you can see what the site would look like. This is just a place holder.
+					</p>
+				</li>
+				<li>
+					<a href="blog.html" class="figure"><img src="images/desserts.jpg" alt="Image"></a>
+					<h2>This is just a place holder.</h2>
+					<p>
+						This is just a place holder, so you can see what the site would look like. This is just a place holder.
+					</p>
+
+				</li>
+			</ul>
+		</div>
+		<div id="navigation">
+			<div>
+				<ul>
+					<li class="first">
+						<a href="index.html">help</a>
+
+					</li>
+					<li>
+						<a href="about.html">about cake delight</a>
+					</li>
+					<li>
+						<a href="index.html">cake delight talk</a>
+					</li>
+					<li>
+
+						<a href="index.html">developers</a>
+					</li>
+					<li>
+						<a href="index.html">privacy policy</a>
+					</li>
+					<li>
+						<a href="index.html">terms of use(updated 10/15/08)</a>
+
+					</li>
+				</ul>
+				<p>
+					Copyright &copy; 2006-2008 cake delight All rights reserved
+				</p>
+			</div>
+		</div>
+		<div style="text-align: center;">
+
+			<br><br>
+<a rel="nofollow" href="http://www.freewebsitetemplates.com/link/create-your-own-free-website/" data-ga-event="click" data-ga-category="Image Link" data-ga-action="Ad Click" data-ga-label="Banner for template preview pages"><img src="/images/website/thumbs/29_3.png" alt="Create Free Websites" /></a>
+
+		</div>
+	</div>
+	</div><!-- end of templatePreview--><script>
+
+
+jQuery.extend(true, XenForo,
+{
+	visitor: { user_id: 0 },
+	serverTimeInfo:
+	{
+		now: 1421117617,
+		today: 1421042400,
+		todayDow: 1
+	},
+	_lightBoxUniversal: "0",
+	_enableOverlays: "1",
+	_animationSpeedMultiplier: "1",
+	_overlayConfig:
+	{
+		top: "10%",
+		speed: 200,
+		closeSpeed: 100,
+		mask:
+		{
+			color: "rgb(255, 255, 255)",
+			opacity: "0.6",
+			loadSpeed: 200,
+			closeSpeed: 100
+		}
+	},
+	_ignoredUsers: [],
+	_loadedScripts: [],
+	_cookieConfig: { path: "/", domain: "", prefix: "xf_"},
+	_csrfToken: "",
+	_csrfRefreshUrl: "login/csrf-token-refresh",
+	_jsVersion: "4d960095"
+});
+jQuery.extend(XenForo.phrases,
+{
+	cancel: "Cancel",
+
+	a_moment_ago:    "A moment ago",
+	one_minute_ago:  "1 minute ago",
+	x_minutes_ago:   "%minutes% minutes ago",
+	today_at_x:      "Today at %time%",
+	yesterday_at_x:  "Yesterday at %time%",
+	day_x_at_time_y: "%day% at %time%",
+
+	day0: "Sunday",
+	day1: "Monday",
+	day2: "Tuesday",
+	day3: "Wednesday",
+	day4: "Thursday",
+	day5: "Friday",
+	day6: "Saturday",
+
+	_months: "January,February,March,April,May,June,July,August,September,October,November,December",
+	_daysShort: "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+
+	following_error_occurred: "The following error occurred",
+	server_did_not_respond_in_time_try_again: "The server did not respond in time. Please try again.",
+	logging_in: "Logging in",
+	click_image_show_full_size_version: "Click this image to show the full-size version.",
+	show_hidden_content_by_x: "Show hidden content by {names}"
+});
+
+// Facebook Javascript SDK
+XenForo.Facebook.appId = "";
+XenForo.Facebook.forceInit = false;
+
+
+</script>
+	<!-- Piwik -->
+	<script type="text/javascript"> 
+	  var _paq = _paq || [];
+	  _paq.push(['trackPageView']);
+	  _paq.push(['enableLinkTracking']);
+	  (function() {
+	    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.freewebsitetemplates.com/";
+	    _paq.push(['setTrackerUrl', u+'piwik.php']);
+	    _paq.push(['setSiteId', 1]);
+	    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+	    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+	  })();
+	
+	</script>
+	<noscript><p><img src="http://piwik.freewebsitetemplates.com/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+
+	<!-- End Piwik Code -->
+
+</body>
+</html>]

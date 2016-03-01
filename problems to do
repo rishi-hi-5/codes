@@ -1,0 +1,24 @@
+problems to do
+
+//must do problems
+1. dp
+2. bitmask
+#3. prims spanning tree
+4. problem on network flow (min max cut)(dinic's algorithm)
+#5. hashing c style 
+#6. find kth smallest or largest element in array in expected linear time
+#7. do all types of sorting
+8. efficient construction on finite automata
+#9. detect cycle in graph
+10. Manchester algorithm for palindromic string
+11. Large number multiplication
+
+//advance 
+1. problem based on trie
+2. search automata style
+3. sudoko
+4. Mathematical algorithms(read always)
+5. Bit algorithms(read always)
+6. All pair shortest path
+7. Graph colouring if possible (:P)
+8. dp section

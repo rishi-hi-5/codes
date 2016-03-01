@@ -1,0 +1,103 @@
+some logical math related things
+
+1. To identify multiple of three :
+	take the difference of even and odd bit by shifting the odd bit one by one and checking whether it is one , if it is the increment the count for the respective position and if the difference between even and odde bits is divisble by three then the number is multiple of three
+
+2. To multiply the number by 7 :
+	multiply the number by 8 by shifting to right and then substract the orignal number form the number obtained i.e 8n-n which gives us the number multiplied by 7
+
+	the same ways can be used to obtain the multiply by other numbers also like if i want to multiply the current number by 9 the this that i will have to do is shift the number by three and the add the original number to it and you get 8n+n which is the required result
+
+	silmilary goes for other numbers
+
+3.finding the square root by babylonian method
+	decide the accuracy value in a variable then itereate through the loop till the valu
+	x=x+y/2 is called the babylonian equation where y is x/y which is a guess ,first we initialize the guess to be one . then we check the the whether x-y is below our accurate measure if yes we stop else we perform the operation again .x-y>e tells that what distance apart are actually this 2 numbers if they are less than the required value we get our answer
+
+4. Magic square . the sum for the magic square is formula n*(n^2-1)/2. the magic numbers can be found 	 as follows
+	1 - n/2,n-1
+	for future numbers do the wrapping as needed
+	just decrement row by 1 and increment column by 1
+	if there is number that exist from the beginning then increment row by 1 and decrement column by 2(row and column are the calculated ones)
+	if row is -1 and column points then the number lies at 0 and n-2 location that is the remaining slot
+
+5. Identify the multiple of 7 
+	use this formula a+2b where 
+	a is the the number not containing the last digit and b is the last digit 
+	recurse until we get the number as 0 or 7 else if number < 10 than declare the number is not divisble by 7
+
+6. Find the largest multiple of 2 3 and 5
+	for doing this we first find if the given number contains a zero because then only it would be divisble by 5 and also by the question is for 3 where we have to find the largest multiple using the given set which can be done by keeping the following properties in mind
+
+	i.the sum of the digit is same for all the combination of the elements provided
+	ii. remainder for number is similar to the remainder of sum of the digit % 3
+	on the basis of this the following algorithm works
+
+	first find the respective remainder and sum and maintain three queues for three different remainder
+	then check whether 
+	sum%3==1 : if yes remove one element from q1 else remove 2 elements from q2 else the number doesnt exist
+
+	sum%3==2 : if yes remove one element from the q2 else reove to element from q1 if q2 is empty else the no such number exist for the given set
+
+	sum%3==0 : populate aux array by dequeuing elements from q and sort it and present the number
+
+	print the array
+
+7. formula for calculating e^x
+	can be imagined by considering the series
+		e^x=1+x/1+x^2./2!+...
+		simplified version
+		e^x=1+x/1(1+x/2(1+x/3..))
+
+		this can be imagined by considering a for loop 
+		sum=1+x*sum/i where i raised to value
+
+8. efficient program to print all the prime factors 
+	first divide the number by 2 and print 2 until it is odd after that 
+	run a loop from 3 to sqroot(n) and see if the number is divisble by it if yes divide it and outputh the factor
+	if no and the number is greater that 2 then print the number that indicates its a prime factor of the given number
+
+9. to check whether a given number is fibonacci or not
+	A number is Fibonacci if and only if one or both of (5*n2 + 4) or (5*n2 – 4) is a perfect square
+
+10. efficient algorithm for multiplication (Russian peasant multiplication):
+		suppose we want the result for the number a*b for that the following steps
+
+		double one number halve another number if havled number becomes odd add the doubled number to the result else continue until halved number becomes 1
+
+11. horners method to evaluate the polynomial for the given x
+		suppose the given polynmial is as follows
+			2 x^3 - 6 x^2 + 2^x - 1
+			then we can simplify the above polynomial as
+
+			((2x-6)x+2)x-1 
+
+			so by doing this we can now easily perform our required opertion in O(n) time
+
+			so the formula becomes
+
+			first initialize the result to highest degree coefficient then multiply it with x and add the number obtained with next coefficient which is further added to our result
+
+12. counting trailing zero in factorial 
+		we now trailing zero is a result of multiplication of 5 and 2 so if we can keep track of 5 and two we can get the required result. By taking some example we can observe that the no of twos is always greater than 5 that means to get the number of trailing zero we only have to keep a track of 5 in that number. this technique remove single five if we want to remove more 5 which appear more that ones in number for example 25=5*5 so will have to divide the number by 25
+		similarly goes for numbers after 125 = 5*5*5 This helps in removing excess five that are required in result
+
+		railing 0s in n! = Count of 5s in prime factors of n!= floor(n/5) + floor(n/25) + floor(n/125) + ....
+
+13. catlan number 
+		some interesting fact catlan number lie in pascals triangle
+		i have liked the video for the explanation of catlan number https://www.youtube.com/watch?v=m9Khxn2g-6w . htis is the best explanation if you want to understand the catlan number and code
+
+14. To find out the angle between hour and minute hand we use the given formula
+		angle=(h*60+m)*0.5-m*6
+		where  theata h    theata m
+
+15. to find the strings of binary without consecutive for given number of bits it can be easily 		obtained by finding out the fibonacci series
+
+16. Find the smallest number whose digits multiply to a given number n find this one on geeks for 		geeks 
+
+17. Returns approximate number of people for a given probability
+		int find(double p)
+		{
+		    return ceil(sqrt(2*365*log(1/(1-p))));
+		}

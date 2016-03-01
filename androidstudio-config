@@ -1,0 +1,5 @@
+ export PATH=$PATH:/home/rishi/android-ndk-r10e/
+export ANDROID_HOME=~/sdk/
+export PATH=$ANDROID_HOME/tools:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+android update project --path . --subprojects --target android-19

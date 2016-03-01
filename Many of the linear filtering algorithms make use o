@@ -1,0 +1,208 @@
+Many of the linear filtering algorithms make use of an array of numbers called a
+kernel.
+A kernel can be thought of as a sliding window that passes over each pixel
+and calculates the output value for that pixel
+
+Convolution provides a way of `multiplying together' two arrays of numbers, generally of different sizes, but of the same dimensionality, to produce a third array of numbers of the same dimensionality.
+many of the image processing methods use this method
+
+The anchor pixel is considered to be at (0, 0). As we can see, the pixels closer to the
+anchor pixel are given a higher weightage than those further away from it use gaussian blur for it
+
+One of the common types of noise present in images is called salt-and-pepper noise.
+In this kind of noise, sparsely occurring black and white pixels are distributed over
+the image.use mind blur for this (they do not use convolution)
+
+
+Morphological operations are a set of operations that process an image based on the
+features of the image and a structuring element. These generally work on binary or
+grayscale images
+
+Dilation is a method by which the bright regions of an image are expanded.Dilation can be used to merge objects that might have been broken off.
+
+There are different types of dilation
+If we use a rectangular structuring element, the image grows in the shape of a
+rectangle. Similarly, if we use an elliptical structuring element, the image grows in
+the shape of an ellipse.
+
+
+erosion is a method by which the dark regions of an image are expanded.
+Erosion can be used to remove the noise from images.
+
+Erosion and dilation are not inverse operations.
+
+Thresholding is the method of segmenting out sections of an image that we would
+like to analyze.
+
+Setting a global threshold value may not be the best option when performing
+segmentation Lighting conditions affect the intensity of pixels. So, to overcome
+this limitation, we will try to calculate the threshold value for any pixel based on its
+neighboring pixels.
+
+noise can be avoided by blurring operation
+
+//chapter 2
+the easiest and the most rudimentary technique. Before we
+understand how Difference of Gaussian (DoG)
+
+edges are points in an image where the pixel
+intensity changes appreciably.
+
+three-step explanation of the algorithm:
+1.	 Convert the given image to a grayscale image.
+2.	 On the grayscale image, perform Gaussian blur using two different blurring
+radiuses (you should have two Gaussian blurred images after this step).
+3.	 Subtract (arithmetic subtraction) the two images generated in the previous
+step to get the resultant image with only edge points (Edges) in it.
+
+
+Why does this technique work? 
+How can subtracting two Gaussian blurred images give us edge points? 
+answer is:
+A Gaussian filter is used to smooth out an image and the extent of smoothening depends on the blurring radius.
+
+
+According to our technique, we have two Gaussian blurred images with different
+blurring radius. When you subtract these two images, you will lose all the points
+where no smoothening or smudging happened, that is, the center of the black and
+white squares in the case of a chess board image. However, pixel values near the
+edges would have changed because smudging pixel values and subtracting such
+points will give us a non-zero value, indicating an edge point. Hence, you get edge
+points after subtracting two Gaussian blurred images.
+
+Note:::it is one of the fastest ways
+
+Note:::This technique might work very well for some images and can completely fail in some scenarios.
+
+Note:::Difference of Gaussian is not often used because it has been superseded by other more sophisticated techniques
+
+
+Canny Edge detection is a widely used algorithm in computer vision and is often
+considered as an optimal technique for edge detection.
+
+The algorithm is broadly divided into four stages:
+1.	 Smoothing the image: This is the first step of the algorithm, where we
+reduce the amount of noise present in the image by performing a Gaussian
+blur with an appropriate blurring radius.
+2.	 Calculating the gradient of the image: Here we calculate the intensity
+gradient of the image and classify the gradients as vertical, horizontal,
+or diagonal. The output of this step is used to calculate actual edges in
+the next stage.
+3.	 Non-maximal supression: Using the direction of gradient calculated in the
+previous step, we check whether or not a pixel is the local maxima in the
+positive and negative direction of the gradient if not then, we suppress the
+pixel (which means that a pixel is not a part of any edge). This is an edge
+thinning technique. Select edge points with the sharpest change.
+4.	 Edge selection through hysteresis thresholding: This is the final step of the
+algorithm. Here we check whether an edge is strong enough to be included
+in the final output, essentially removing all the less prominent edges.
+
+Gaussian Filter
+
+Since all edge detection results are easily affected by image noise, it is essential to filter out the noise to prevent false detection caused by noise. To smooth the image, a Gaussian filter is applied to convolve with the image. This step will slightly smooth the image to reduce the effects of obvious noise on the edge detector
+
+
+The Sobel operator
+Another technique for computing edges in an image
+
+calculate the intensity gradient
+of the pixel, but in a different way
+
+calculate the approximate intensity gradient (calculates directional change that could be useful to extract information - doubt about derivatives ) by convoluting the image with two 3x3 kernels for horizontal and vertical directions each
+
+Prewit operator similar to the sobel operator
+
+
+corner detection
+
+in the literal sense of the term, corners are points of intersection of two edges or
+a point which has multiple prominent edge directions in its local neighborhood.
+Corners are often considered as points of interest in an image and are used in many
+applications, ranging from image correlation, video stabilization, 3D modelling,
+and the likes.
+
+Harris Corner detection 
+uses a sliding window over the image to calculate the variation in intensity Since corners will have large variations in the intensity values around them, we are looking for positions in the image where the sliding windows show large variations in intensity.
+
+
+Hough transformations
+
+So far, we looked at how to detect edges and corners in an image. Sometimes, for
+image analysis apart from edges and corners, you want to detect shapes, such as
+lines, circles, ellipses, or any other shape for that matter.A technique that comes handy in such scenarios is Hough transformations.
+
+The generalized Hough transformation is capable of detecting any shape for
+which we can provide an equation in the parameterized form.
+
+As the shapes start getting complex (with an increase in the number of dimensions), such as spheres or
+ellipsoids, it gets computationally expensive; hence, we generally look at standard
+Hough transformations for simple 2D shapes, such as lines and circles.
+
+there are two types of hough tansforms
+hough lines
+probabilistic hough lines
+difference is that the second algorithm takes less time because its random sampling
+
+
+Contours
+We are often required to break down the image into smaller segments to have a
+more focused view of the object of interest. Say for instance, you have an image with
+balls from different sports, such as a golf ball, cricket ball, tennis ball, and football.
+However, you are only interested in analyzing the football. One way of doing this
+could be by using Hough circles that we looked at in the last section. Another way of
+doing this is using contour detection to segment the image into smaller parts, with
+each segment representing a particular ball.
+
+
+Contours are nothing but connected curves in an image or boundaries of connected
+components in an image. Contours are often computed using edges in an image,
+but a subtle difference between edges and contours is that contours are closed,
+whereas edges can be anything. The concept of edges is very local to the point and its
+neighboring pixels; however, contours take care of the object as a whole
+
+it is not necessary to use the grayscale version of the image, you can directly work with colored images as well
+
+Features are specific patterns that are unique and can be easily tracked and
+compared.
+
+good features are those which can be easily localized and thus are
+easy to track :: especially the corners
+
+
+Scale Invariant Feature Transform
+
+Some of the properties of SIFT are as follows:
+•	 It is invariant to scaling and rotation changes in objects
+•	 It is also partially invariant to 3D viewpoint and illumination changes
+•	 A large number of keypoints (features) can be extracted from a single image
+
+SIFT follows a strategy of matching robust local features. It is divided into four parts:
+•	 Scale-space extrema detection
+		In this step, an image is progressively blurred out using Gaussian blur to get
+	rid of some details in the images. It has been mathematically proven (under
+	reasonable assumptions) that performing Gaussian blur is the only way to
+	carry this out effectively.
+
+	Progressively blurred images constitute an octave. A new octave is formed by
+	resizing the original image of the previous octave to half and then progressively
+	blurring it. Lowe recommends that you use four octaves of five images each for
+	the best results.
+
+	To precisely detect edges in an image, we use the Laplacian operator (provides enhancement technique in remote sensing applications) 
+		
+	This locates the edges and corners that are good for finding the keypoints. This operation is
+	called the Laplacian of Gaussian.
+		In this method, second we blur the image a little and then calculate its second derivative.
+
+
+	To generate the Laplacian of Gaussian images, we calculate the difference between
+	two consecutive images in an octave. This is called the Difference of Gaussian
+	(DoG). These DoG images are approximately equal to those obtained by calculating
+	the Laplacian of Gaussian. Using DoG also has an added benefit. The images
+	obtained are also scale invariant.
+
+•	 Keypoint localization
+		we compare a pixel's value with its 26 neighbors. We do not calculate the keypoints in the uppermost and lowermost images in an octave because we do not have enough neighbors to identify the extremas.
+
+•	 Orientation assignment
+•	 Keypoint descriptor

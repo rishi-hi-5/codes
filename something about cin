@@ -1,0 +1,5 @@
+// Ignore to the end of file
+cin.ignore(std::numeric_limits<std::streamsize>::max())
+
+// Ignore to the end of line
+cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n')

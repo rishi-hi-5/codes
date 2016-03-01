@@ -1,0 +1,6 @@
+
+//explains the concept of euclidean algorithm very well
+http://www-math.ucdenver.edu/~wcherowi/courses/m5410/exeucalg.html
+
+very important point to note about undirected graph
+only one vertex with odd degree is not possible in an undirected graph (sum of all degrees is always even in an undirected graph)

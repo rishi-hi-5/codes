@@ -1,0 +1,30 @@
+#include<stdio.h>
+//#include<conio>
+int main()
+{
+
+	int t,error,flag=0;
+	char ch;
+	scanf("%d",&t);
+	while(t--)
+	{
+		error=0;
+		if(flag==0)
+		{
+			ch=getchar();
+			break;
+		}
+		ch=getchar();
+		while(ch>'0'&&ch<='9')
+		{
+		//	printf("%c",ch);
+			if(ch!='7'&&ch!='4')
+			error++;
+			ch=getchar();
+		//	ch=getchar();
+		}
+		printf("%d\n",error);
+	}
+	
+return 0;	
+}
