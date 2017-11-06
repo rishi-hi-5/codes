@@ -1,0 +1,31 @@
+t=int(input())
+while(t!=0):
+    n=int(input())
+    a=list(map(int,input().strip().split()))
+    c=[0 for i in range(n)]
+    d=dict(zip(a,c))
+    k=0
+    i=0
+    flag=0
+    num=0
+    while(i<=len(l)):
+        k=i-1
+        j=0
+        num+=1
+        while(j<k):
+            if a[j]==a[i]:
+                j+=1
+                d[i]+=1
+                continue
+            else:
+                flag=1
+                break
+        i+=j
+        if(flag==1):
+            break
+    
+    if(flag==1):
+        print("Invalid Data")
+    else:
+        print(num)
+    t-=1
