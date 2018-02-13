@@ -1,0 +1,15 @@
+p=input()
+t=input()
+pn=[0 for i in range(0,len(p))]
+
+p1=0
+p2=p1+1
+
+while(p2<=len(p)):
+    if(p[p1]==p[p2]):
+        pn[p1]+=1
+    else:
+        p1=pn[p1-1]
+    p1+=1
+    p2+=1
+print(pn)
